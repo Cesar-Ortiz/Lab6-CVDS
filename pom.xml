@@ -88,7 +88,7 @@
                            </artifactItem>
                        </artifactItems>
                    </configuration>
-               </execution
+               </execution>
            </executions>
        </plugin>
 
