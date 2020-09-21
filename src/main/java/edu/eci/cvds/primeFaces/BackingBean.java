@@ -1,4 +1,4 @@
-package edu.eci.cvds.primeFaces;
+package edu.eci.cvds.primefaces;
 
 import java.util.ArrayList;
 
@@ -103,10 +103,10 @@ public class BackingBean {
 
 	public ArrayList<Double> change(String stringList){
 		String cad="";
-		stringList+=",";
-		for(int i=0;i<stringList.length();i++){
-			if(stringList.charAt(i)!=','){
-				cad += stringList.charAt(i)+"";
+		String list=stringList + ",";
+		for(int i=0;i<list.length();i++){
+			if(list.charAt(i)!=','){
+				cad += list.charAt(i)+"";
 			}
 			else {
 				numberList.add(Double.parseDouble(cad));
