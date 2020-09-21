@@ -2,7 +2,7 @@ package edu.eci.cvds.primeFaces;
 
 import java.util.ArrayList;
 
-import javax.faces.bean.ApplicationScoped;
+//import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
 
@@ -66,7 +66,8 @@ public class BackingBean {
 	}
 	
 	public double calculateMode(ArrayList<Double> numberList) {
-		double max = 0, maxCount = 0;
+		double max = 0;
+		double maxCount = 0;
 		for (int i = 0; i < numberList.size(); ++i) {
 			int count = 0;
 			for (Double number : numberList) {
