@@ -4,13 +4,19 @@
       xmlns:p="http://primefaces.org/ui">
   <h:head>
      <title>Calculate form</title>
+     <link rel="stylesheet" href="estilo.css"/>
+     <link rel="icon" href="imagenes/calculadora.ico"/>
   </h:head>
-  <h:body>
-    <h2>Welcome to the calculate form</h2>
+  <body background="imagenes/fondo.png">
+    <center>
+    <h2><font color="white" face="georgia" size="10">Welcome to the calculate form </font></h2>
+    </center>
     <h:form id="calculadora_form">
-      <p:inputText binding="#{NumsInput}" />
+      <p:inputText class="label" binding="#{NumsInput}" />
       <br/><br/>
-      <p:panelGrid columns="2">
+      <img class="calcu" src="imagenes/calculadora.png" width="220" height="260"></img>
+      <br/><br/>
+      <p:panelGrid class="tablas"  columnClasses="firstColumn,secondColumn" columns="2">
         <p:outputLabel value="Mean: "/>
 	<p:outputLabel value="#{calculadoraBean.mean}"/>
         <p:outputLabel value="Mode: "/>
@@ -21,17 +27,13 @@
 	<p:outputLabel value="#{calculadoraBean.variance}"/>
       </p:panelGrid>
       <br/><br/>
-      <p:commandButton value="Calculate" update="calculadora_form" actionListener="#{calculadoraBean.calculate(NumsInput.value)}">
+      <p:commandButton class="b1" value="Calculate" update="calculadora_form" actionListener="#{calculadoraBean.calculate(NumsInput.value)}">
       </p:commandButton>
-      <p:commandButton value="Restart" update="calculadora_form" actionListener="#{calculadoraBean.restart()}">
+      <p:commandButton class="b2" value="Restart" update="calculadora_form" actionListener="#{calculadoraBean.restart()}">
       </p:commandButton>
       <br/><br/>
-      <h:dataTable value="#{calculadoraBean.stringL}" var="numLists">
-        <h:column>
-            <h:outputText value="List "></h:outputText>
-          <h:outputText value="#{numLists}"></h:outputText>
-        </h:column>
-      </h:dataTable>
     </h:form>
-  </h:body>
+    <img class="gifs" src="imagenes/gifmate.gif"></img>
+    <video class="videos" src="imagenes/math.mp4" controls=""></video>
+  </body>
 </html>
